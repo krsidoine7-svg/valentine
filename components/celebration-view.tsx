@@ -9,7 +9,7 @@ export function CelebrationView() {
     const animationEnd = Date.now() + duration
     const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 }
 
-    const randomInRange = (min, max) => Math.random() * (max - min) + min
+    const randomInRange = (min: number, max: number) => Math.random() * (max - min) + min
 
     const interval = setInterval(function () {
       const timeLeft = animationEnd - Date.now()
@@ -61,8 +61,8 @@ export function CelebrationView() {
         Je savais que tu dirais oui ! 
       </p>
       
-      <p className="text-lg text-muted-foreground italic max-w-xs mx-auto">
-        Prépare-toi pour une Saint-Valentin inoubliable... 
+      <p className="text-lg text-muted-foreground italic max-w-sm mx-auto leading-relaxed">
+        "Chaque seconde passée avec toi est un cadeau précieux. Tu es mon évidence, mon bonheur et mon tout. Je t'aime plus que les mots ne pourront jamais l'exprimer." 
       </p>
 
       <div className="mt-10 flex gap-2 justify-center">
