@@ -1,9 +1,9 @@
-"use client"
+﻿"use client"
 
 import { useCallback, useRef, useState } from "react"
-import { CelebrationView } from "./celebration-view"
+import { CelebrationView } from "./celebration-view"`nimport { useValentineName } from "@/hooks/use-valentine-name"
 
-export function ValentineCard() {
+export function ValentineCard() {`n  const name = useValentineName()
   const [accepted, setAccepted] = useState(false)
   const [noButtonPos, setNoButtonPos] = useState<{ top: string; left: string } | null>(null)
   const [escapeCount, setEscapeCount] = useState(0)
@@ -62,7 +62,7 @@ export function ValentineCard() {
 
           {/* Romantic message */}
           <h1 className="font-dancing text-3xl sm:text-4xl text-center text-card-foreground mb-2 leading-snug">
-            Mon coeur...
+            {name}...
           </h1>
           <p className="text-center text-muted-foreground text-lg mb-8">
             Veux-tu etre ma Valentine ?
@@ -121,3 +121,4 @@ export function ValentineCard() {
     </>
   )
 }
+

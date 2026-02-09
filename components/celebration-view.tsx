@@ -2,8 +2,11 @@
 
 import { useEffect, useCallback } from "react"
 import confetti from "canvas-confetti"
+import { useValentineName } from "@/hooks/use-valentine-name"
 
 export function CelebrationView() {
+  const name = useValentineName()
+  
   const triggerConfetti = useCallback(() => {
     const duration = 5 * 1000
     const animationEnd = Date.now() + duration
@@ -54,7 +57,7 @@ export function CelebrationView() {
       </div>
 
       <h1 className="font-dancing text-5xl sm:text-6xl text-primary mb-6 drop-shadow-sm">
-        Yesssss !
+        Yesssss {name} !
       </h1>
       
       <p className="text-2xl sm:text-3xl font-medium text-foreground mb-4">

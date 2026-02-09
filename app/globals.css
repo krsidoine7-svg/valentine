@@ -1,4 +1,4 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -39,7 +39,24 @@
   }
   body {
     @apply bg-background text-foreground;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 24px'><text y='20'></text></svg>"), auto;
   }
+}
+
+/* Heart click effect animation */
+@keyframes heart-burst {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) scale(1.5) rotate(var(--tw-rotate));
+    opacity: 0;
+  }
+}
+
+.animate-heart-burst {
+  animation: heart-burst 0.8s ease-out forwards;
 }
 
 /* Floating hearts animation */
@@ -113,3 +130,4 @@
 .font-dancing {
   font-family: var(--font-dancing), cursive;
 }
+
